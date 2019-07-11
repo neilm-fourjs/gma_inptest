@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManagedForm fileVersion="31400" gstVersion="31405" name="managedform" uid="{08906b79-eca8-4585-87f4-414e7fe5a872}">
+  <AGSettings>
+    <DynamicProperties version="2"/>
+  </AGSettings>
+  <Record name="stk_take" uid="{8b46b301-f15f-4edb-9cab-fbd0fbddb85e}">
+    <RecordField defaultValue="test" fieldIdRef="2" name="stk_code" uid="{460cfcf2-05ce-4872-9675-06891e9fe591}"/>
+    <RecordField fieldIdRef="4" name="stk_desc" uid="{c754100b-d988-47c5-9265-f91810d548b5}"/>
+    <RecordField defaultValue="0" fieldIdRef="8" name="count_qty" precisionDecimal="13" scaleDecimal="2" sqlType="CHAR" uid="{e06df92d-0aa6-455c-8de3-8490368fe481}"/>
+    <RecordField fieldIdRef="6" name="uom" uid="{bea6bfd0-34c3-44c2-9393-edebf2690348}"/>
+    <RecordField defaultValue="Stock Code:" fieldIdRef="1" name="code_lbl" uid="{d6824e30-bf14-441f-870b-98de62e8be2f}"/>
+    <RecordField defaultValue="Desc:" fieldIdRef="3" name="desc_lbl" uid="{aac21ee1-c884-48ee-a98e-f4c9929d20a1}"/>
+    <RecordField defaultValue="Uom:" fieldIdRef="5" name="uom_lbl" uid="{1b9b0dcd-fca7-49bd-9f06-7b4fe7f457ad}"/>
+    <RecordField defaultValue="Count Qty:" fieldIdRef="7" name="count_qty_lbl" uid="{ba6cedba-71ba-4810-9a9e-574084cb1eb4}"/>
+  </Record>
+  <Form gridHeight="34" gridWidth="80" name="form" text="Form">
+    <ScrollGrid gridChildrenInParent="true" gridHeight="32" gridWidth="40" initialPageSize="5" name="scrollgrid1" posX="0" posY="2" wantFixedPageSizeSG="false">
+      <Edit columnCount="1" defaultValue="Stock Code:" fieldId="1" gridHeight="1" gridWidth="10" name="code_lbl" noEntry="true" posX="1" posY="2" repeat="false" rowCount="3" sizePolicy="fixed" stepX="1" stepY="4" style="label" tabIndex="-1" title="edit1" widget="Edit"/>
+      <ButtonEdit action="scan_barcode" case="upper" columnCount="1" defaultValue="test" fieldId="2" gridHeight="1" gridWidth="16" name="stk_code" posX="12" posY="2" repeat="false" rowCount="3" stepX="1" stepY="4" tabIndex="-1" title="phantom1" widget="ButtonEdit"/>
+      <Edit columnCount="1" defaultValue="Count Qty:" fieldId="7" gridHeight="1" gridWidth="10" name="count_qty_lbl" noEntry="true" posX="1" posY="3" repeat="false" rowCount="3" sizePolicy="fixed" stepX="1" stepY="4" style="label" tabIndex="-1" title="edit1" widget="Edit"/>
+      <ButtonEdit action="next" columnCount="1" defaultValue="0" fieldId="8" gridHeight="1" gridWidth="16" keyboardHint="number" name="count_qty" posX="12" posY="3" precisionDecimal="13" repeat="false" required="true" rowCount="3" scaleDecimal="2" sqlType="CHAR" stepX="1" stepY="4" tabIndex="-1" title="edit1" widget="ButtonEdit"/>
+      <Phantom fieldId="3" name="desc_lbl" widget="Phantom"/>
+      <Phantom fieldId="4" name="stk_desc" widget="Phantom"/>
+      <Phantom fieldId="5" name="uom_lbl" widget="Phantom"/>
+      <Phantom fieldId="6" name="uom" widget="Phantom"/>
+    </ScrollGrid>
+  </Form>
+  <DiagramLayout>
+    <![CDATA[AAAAAgAAAEwAewA4AGIANAA2AGIAMwAwADEALQBmADEANQBmAC0ANABlAGQAYgAtADkAYwBhAGIALQBmAGIAZAAwAGYAYgBkAGQAYgA4ADUAZQB9AAAAAAAAAAAAAAAAAAAAAD9ok3S8an76AQ==]]>
+  </DiagramLayout>
+</ManagedForm>

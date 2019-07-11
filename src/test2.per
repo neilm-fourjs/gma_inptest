@@ -1,0 +1,29 @@
+LAYOUT (TEXT="Array List")
+VBOX
+GRID ( STYLE="big" )
+{ 
+Text: [f001       ] 
+Value:[f002       ]
+}
+END -- GRID
+
+TABLE (STYLE="listView")
+{
+[t001 |t002 ]
+[t001 |t002 ]
+[t001 |t002 ]
+[t001 |t002 ]
+[t001 |t002 ]
+}
+END -- TABLE
+END -- VBOX
+
+ATTRIBUTES
+BUTTONEDIT f001 = FORMONLY.txt, ACTION=scan_barcode;
+BUTTONEDIT f002 = FORMONLY.val, ACTION=next;
+
+t001 = FORMONLY.a_txt;
+t002 = FORMONLY.a_val;
+
+INSTRUCTIONS
+SCREEN RECORD s_arr ( FORMONLY.a_txt THRU FORMONLY.a_val)
