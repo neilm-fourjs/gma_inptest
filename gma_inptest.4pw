@@ -80,6 +80,8 @@
       <File filePath="src/test1.4fd"/>
       <File filePath="src/test2.4gl"/>
       <File filePath="src/test2.per"/>
+      <File filePath="src/test3.4gl"/>
+      <File filePath="src/test3.per"/>
     </Application>
     <Library binaryName="etc" id="159917928" label="etc">
       <File filePath="etc/default.4ad"/>

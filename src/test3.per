@@ -1,0 +1,21 @@
+
+LAYOUT (TEXT="InpArr")
+TABLE ( STYLE="normal" ) 
+{
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+[f001        |f002  ]
+}
+END -- TABLE
+
+ATTRIBUTES
+BUTTONEDIT f001 = FORMONLY.txt, ACTION=scan_barcode, TITLE="Code";
+BUTTONEDIT f002 = FORMONLY.val, ACTION=next, TITLE="Qty";
+
+INSTRUCTIONS
+SCREEN RECORD s_arr ( FORMONLY.txt THRU FORMONLY.val)

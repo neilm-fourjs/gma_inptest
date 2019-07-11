@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="ANSI_X3.4-1968"?>
 <StyleList>
-  <Style name=".listView">
+  <Style name="Table.listView">
 		<StyleAttribute name="tableType" value="listView"/>
+		<StyleAttribute name="reduceFilter" value="no"/>
+  </Style>
+  <Style name="Table.normal">
+		<StyleAttribute name="tableType" value="normal"/>
 		<StyleAttribute name="reduceFilter" value="no"/>
   </Style>
   <Style name=".noborder">
