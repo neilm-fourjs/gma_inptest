@@ -72,9 +72,24 @@
       <Directory description="Resources" label="etc" recursive="false" sourceDirectory="$(ProjectDir)/etc"/>
       <Directory destinationDirectory="$(RootDir)/gbc" includedFiles="*.zip" label="gbc" sourceDirectory="$(ProjectDir)/gbc"/>
     </Package>
+    <Package binaryName="inptest320" id="1783444454" label="inptest320" platform="Genero Application Server">
+      <DynamicProperty name="packageId" value="inptest"/>
+      <DynamicProperty name="packageLabel" value="inptest"/>
+      <Directory excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" sourceDirectory="$(ProjectDir)/bin"/>
+      <Directory includedFiles="*.4ad,*.4st,*.xcf,*.4tm,*.4tb,*.4sm,*.42s,*.iem,fglprofile" label="etc" sourceDirectory="$(ProjectDir)/etc"/>
+      <Directory label="gas" sourceDirectory="$(ProjectDir)/gas"/>
+    </Package>
   </Group>
-  <Group environment="value:FGLPROFILE=$(ProjectDir)/etc/fglprofile,value:FGLRESOURCEPATH=$(ProjectDir)/etc" id="10414220" label="Project" language="Genero">
-    <Application binaryName="App" id="-1626818582" label="App">
+  <Group environment="value:FGLGBCDIR=$(ProjectDir)/gbc/gbc-clean,value:FGLPROFILE=$(ProjectDir)/etc/fglprofile,value:FGLRESOURCEPATH=$(ProjectDir)/etc" id="10414220" label="Project" language="Genero">
+    <Library binaryName="etc" id="159917928" label="etc">
+      <File filePath="etc/default.4ad"/>
+      <File filePath="etc/default.4st"/>
+      <File filePath="etc/fglprofile"/>
+    </Library>
+    <Library binaryName="gas" id="-2045692439" label="gas">
+      <File filePath="gas/inptest.xcf"/>
+    </Library>
+    <Application binaryName="inptest" id="-1626818582" label="inptest">
       <File filePath="src/main.4gl"/>
       <File filePath="src/test1.4gl"/>
       <File filePath="src/test1.4fd"/>
@@ -83,10 +98,5 @@
       <File filePath="src/test3.4gl"/>
       <File filePath="src/test3.per"/>
     </Application>
-    <Library binaryName="etc" id="159917928" label="etc">
-      <File filePath="etc/default.4ad"/>
-      <File filePath="etc/default.4st"/>
-      <File filePath="etc/fglprofile"/>
-    </Library>
   </Group>
 </Project>

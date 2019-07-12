@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="ANSI_X3.4-1968"?>
 <StyleList>
+  <Style name=".nohighlight">
+		<StyleAttribute name="highlightCurrentRow" value="no"/>
+  </Style>
   <Style name="Table.listView">
 		<StyleAttribute name="tableType" value="listView"/>
 		<StyleAttribute name="reduceFilter" value="no"/>
