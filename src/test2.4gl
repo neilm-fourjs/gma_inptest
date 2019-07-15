@@ -6,14 +6,17 @@ DEFINE m_arr DYNAMIC ARRAY OF t_rec
 DEFINE m_rec t_rec
 ----------------------------------------------------------------------------------------------------
 FUNCTION test2()
+	DEFINE num SMALLINT
   OPEN FORM f FROM "test2"
   DISPLAY FORM f
+	LET num = 1
   DIALOG ATTRIBUTES(UNBUFFERED)
-    INPUT BY NAME m_rec.* ATTRIBUTES(WITHOUT DEFAULTS)
+    INPUT BY NAME num, m_rec.* ATTRIBUTES(WITHOUT DEFAULTS)
       AFTER INPUT
         IF m_rec.txt IS NOT NULL THEN
           IF NOT int_flag THEN
             LET m_arr[m_arr.getLength() + 1].* = m_rec.*
+						LET num = m_arr.getLength()
           END IF
           INITIALIZE m_rec TO NULL
           NEXT FIELD txt

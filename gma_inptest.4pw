@@ -65,19 +65,23 @@
   <LanguageList version="1.0"/>
   <PlatformList version="1.0"/>
   <Group environment="value:FGLGBCDIR=$(ProjectDir)/gbc/gbc-clean" id="674884836" label="Packages" language="Genero">
-    <Package binaryName="inptest" dependencies="781919164,159917928,212784684,715422167,362164715,313644474,-1626818582" description="Android Package" id="187810339" label="inptest" platform="Android">
-      <DynamicProperty name="packageId" value="com.fourjs.inptest"/>
-      <DynamicProperty name="packageLabel" value="inptest"/>
-      <Directory description="Binaries" excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" recursive="false" sourceDirectory="$(ProjectDir)/bin"/>
-      <Directory description="Resources" label="etc" recursive="false" sourceDirectory="$(ProjectDir)/etc"/>
-      <Directory destinationDirectory="$(RootDir)/gbc" includedFiles="*.zip" label="gbc" sourceDirectory="$(ProjectDir)/gbc"/>
-    </Package>
-    <Package binaryName="inptest320" id="1783444454" label="inptest320" platform="Genero Application Server">
+    <Package binaryName="inptestGAR" dependencies="-2045692439,159917928,-1626818582" id="1783444454" label="inptestGAR" platform="Genero Application Server">
       <DynamicProperty name="packageId" value="inptest"/>
       <DynamicProperty name="packageLabel" value="inptest"/>
       <Directory excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" sourceDirectory="$(ProjectDir)/bin"/>
       <Directory includedFiles="*.4ad,*.4st,*.xcf,*.4tm,*.4tb,*.4sm,*.42s,*.iem,fglprofile" label="etc" sourceDirectory="$(ProjectDir)/etc"/>
       <Directory label="gas" sourceDirectory="$(ProjectDir)/gas"/>
+    </Package>
+    <Package binaryName="inptestGMA" dependencies="781919164,159917928,212784684,715422167,362164715,313644474,-1626818582" description="Android Package" id="187810339" label="inptestGMA" platform="Android">
+      <DynamicProperty name="gma-accent-color" value="#cd758a"/>
+      <DynamicProperty name="gma-navigationBarBackground-color" value="#b1393b"/>
+      <DynamicProperty name="gma-primary-color" value="#b12e37"/>
+      <DynamicProperty name="gma-primary-dark-color" value="#b13148"/>
+      <DynamicProperty name="packageId" value="com.fourjs.inptest"/>
+      <DynamicProperty name="packageLabel" value="inptest"/>
+      <Directory description="Binaries" excludedFiles="Test.42r" includedFiles="*.42?" label="Binaries" recursive="false" sourceDirectory="$(ProjectDir)/bin"/>
+      <Directory description="Resources" label="etc" recursive="false" sourceDirectory="$(ProjectDir)/etc"/>
+      <Directory destinationDirectory="$(RootDir)/gbc" includedFiles="*.zip" label="gbc" sourceDirectory="$(ProjectDir)/gbc"/>
     </Package>
   </Group>
   <Group environment="value:FGLGBCDIR=$(ProjectDir)/gbc/gbc-clean,value:FGLPROFILE=$(ProjectDir)/etc/fglprofile,value:FGLRESOURCEPATH=$(ProjectDir)/etc" id="10414220" label="Project" language="Genero">

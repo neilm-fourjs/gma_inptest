@@ -1,9 +1,10 @@
 LAYOUT (TEXT="Array List")
 VBOX
 GRID ( STYLE="big" )
-{ 
-Text: [f001       ] 
-Value:[f002       ]
+{
+Test: [f000]
+Text: [f001       ]
+Value:[f002       ]n
 }
 END -- GRID
 
@@ -19,8 +20,9 @@ END -- TABLE
 END -- VBOX
 
 ATTRIBUTES
+EDIT f000 = FORMONLY.num, KEYBOARDHINT=NUMBER;
 BUTTONEDIT f001 = FORMONLY.txt, ACTION=scan_barcode;
-BUTTONEDIT f002 = FORMONLY.val, ACTION=next;
+BUTTONEDIT f002 = FORMONLY.val, ACTION=next,KEYBOARDHINT=NUMBER;
 
 t001 = FORMONLY.a_txt;
 t002 = FORMONLY.a_val;
